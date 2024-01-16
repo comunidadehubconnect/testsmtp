@@ -23,8 +23,6 @@ ActionMailer::Base.smtp_settings
 ```
 
 ```bash
-# Fill values for appropriate settings
-# Remove the keys which aren't relevant to your use case
 smtp_settings = {
   address: '',
   port: '',
@@ -38,11 +36,9 @@ smtp_settings = {
 }
 
 mailer = ActionMailer::Base.new
-# check settings:
 mailer.delivery_method = :smtp
 mailer.smtp_settings = smtp_settings
 
-# replace with your values for the mail
 mailer.mail(from: 'remetente@email.com', to: 'destinario@email.com', subject: 'test', body: "Hello, you've got mail!").deliver
 ```
 
